@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibrunial <ibrunial@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/09 11:18:26 by ibrunial          #+#    #+#             */
-/*   Updated: 2024/11/09 15:33:32 by ibrunial         ###   ########.fr       */
+/*   Created: 2024/11/12 10:34:06 by ibrunial          #+#    #+#             */
+/*   Updated: 2024/11/12 10:41:14 by ibrunial         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
+int	ft_strlen(char *str)
 {
-	*a ^= *b;
-	*b = *a ^ *b;
-	*a ^= *b;
+	int		count;
+
+	count = 0;
+	while (*str != '\0')
+	{
+		count++;
+		str++;
+	}
+	return (count);
 }
 
 /*
 int main(){
-	int a = 0x7FFFFFFF, b = 1;
-	printf("%d %d\n", a, b);
-	ft_swap(&a, &b);
-	printf("%d %d\n", a, b);
+	char msg[] = "hello";
+	printf("%d\n", ft_strlen(msg));
 }
 */
